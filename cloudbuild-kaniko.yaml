@@ -4,7 +4,7 @@ steps:
       - --destination=eu.gcr.io/$PROJECT_ID/$REPO_NAME:${_BUILD_TAG}
       - --cache=true
       - --cache-ttl=48h
-      - --dockerfile=docker/Dockerfile
+      - --dockerfile=Dockerfile
       - --context=.
       - --build-arg
       - REPO_NAME=$REPO_NAME
