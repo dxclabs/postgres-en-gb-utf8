@@ -1,0 +1,23 @@
+steps:
+
+- name: gcr.io/cloud-builders/docker
+  args: ['build',
+         '--build-arg',
+         'REPO_NAME=$REPO_NAME',
+         '--build-arg',
+         'BRANCH_NAME=$BRANCH_NAME',
+         '--build-arg',
+         'TAG_NAME=$TAG_NAME',
+         '--build-arg',
+         'REVISION_ID=$REVISION_ID',
+         '--build-arg',
+         'COMMIT_SHA=$COMMIT_SHA',
+         '--build-arg',
+         'SHORT_SHA=$SHORT_SHA',
+         '-t',
+         'eu.gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA',
+         '-f',
+         'docker/Dockerfile',
+         '.']
+images: ['eu.gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA']
+timeout: 300s
