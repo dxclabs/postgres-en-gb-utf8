@@ -19,4 +19,5 @@ steps:
 substitutions:
     _BUILD_TAG: ${COMMIT_SHA}
     _KANIKO_TAG: latest # default values
+
 # timeout: 300s
