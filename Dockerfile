@@ -1,7 +1,7 @@
 # postgres-en-gb-utf8-14
-# Version: 1.1.0
+# Version: 1.2.0
 
-FROM postgres:14.8
+FROM postgres:14.13
 
 LABEL maintainer="Campbell McKilligan <campbell@dxclabs.com>"
 
